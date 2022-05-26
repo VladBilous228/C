@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main(void)
+{
+
+    int a = 0, b = 0, c = 0;
+    cout << "Enter first number: ";
+    cin >> a;
+    cout << "Enter second number: ";
+    cin >> b;
+    try
+    {
+        if (b == 0)
+            throw "Your input is not valid, you can't divide by zero.";
+        c = a / b;
+    }
+    catch (const char* zero)
+    {
+        cout << zero << endl;
+    }
+    cout << c << endl;
+    return 0;
+}
